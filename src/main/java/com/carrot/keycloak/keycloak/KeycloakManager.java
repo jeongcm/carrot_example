@@ -42,6 +42,21 @@ public class KeycloakManager {
         }
     }
 
+    public void deleteUser(Keycloak keycloak, String username) {
+        var realm = keycloak.realm("Claiops_Realm");
+
+        var users = realm.users();
+
+        var searchedUser = users.search(username);
+
+        if (!searchedUser.isEmpty()) {
+            var user = searchedUser.get(0);
+            Response response = realm.users().delete(user.getId());
+            System.out.println("deleteUser Response:" + response.getStatus() + response.getStatusInfo());
+
+        }
+    }
+
     public void createUser(Keycloak keycloak, String username, String password) {
         // create user representation
         RealmResource realm = keycloak.realm("Claiops_Realm");
