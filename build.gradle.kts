@@ -6,7 +6,7 @@ plugins {
 	id("org.graalvm.buildtools.native") version "0.9.28"
 }
 
-group = "com.claiops"
+group = "com.carrot"
 version = "0.0.1-SNAPSHOT"
 
 java {
@@ -36,6 +36,8 @@ dependencies {
 	annotationProcessor("org.projectlombok:lombok")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.springframework.security:spring-security-test")
+
+	implementation("org.keycloak:keycloak-admin-client:23.0.1")
 }
 
 tasks.withType<Test> {

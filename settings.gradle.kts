@@ -1,1 +1,1 @@
-rootProject.name = "lancer"
+rootProject.name = "keycloak"

@@ -1,10 +1,10 @@
-package com.claiops.lancer;
+package com.carrot.keycloak;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class LancerApplicationTests {
+class keycloakApplicationTests {
 
 	@Test
 	void contextLoads() {
