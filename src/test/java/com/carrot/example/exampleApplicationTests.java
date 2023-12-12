@@ -1,10 +1,10 @@
-package com.carrot.keycloak;
+package com.carrot.example;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class keycloakApplicationTests {
+class exampleApplicationTests {
 
 	@Test
 	void contextLoads() {

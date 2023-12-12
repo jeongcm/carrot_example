@@ -1,4 +1,4 @@
-package com.carrot.keycloak.keycloak;
+package com.carrot.example.keycloak;
 
 
 import jakarta.ws.rs.core.Response;

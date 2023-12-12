@@ -1,13 +1,12 @@
-package com.carrot.keycloak;
+package com.carrot.example;
 
-import com.carrot.keycloak.keycloak.KeycloakManager;
-import com.carrot.keycloak.keycloak.KeycloakResource;
+import com.carrot.example.keycloak.KeycloakManager;
 import org.keycloak.admin.client.Keycloak;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class keycloakApplication {
+public class ExampleApplication {
 
 	public static void main(String[] args) {
 		try (Keycloak keycloak = Keycloak.getInstance(
@@ -24,7 +23,7 @@ public class keycloakApplication {
 //			keycloakManager.deleteUser(keycloak, "test_user");
 		}
 
-		SpringApplication.run(keycloakApplication.class, args);
+		SpringApplication.run(ExampleApplication.class, args);
 
 	}
 
