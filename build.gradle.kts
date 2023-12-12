@@ -24,19 +24,30 @@ repositories {
 }
 
 dependencies {
+	// spring boot starter
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("org.springframework.boot:spring-boot-starter-oauth2-client")
 	implementation("org.springframework.boot:spring-boot-starter-security")
 	implementation("org.springframework.boot:spring-boot-starter-web")
-	implementation("org.springframework.boot:spring-boot-starter-web-services")
-	compileOnly("org.projectlombok:lombok")
+
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
-	runtimeOnly("com.mysql:mysql-connector-j")
+
+	// db
+//	runtimeOnly("com.mysql:mysql-connector-j")
 	runtimeOnly("org.postgresql:postgresql")
+
+	// lombok
 	annotationProcessor("org.projectlombok:lombok")
+
+	// test
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.springframework.security:spring-security-test")
 
+	// jmeter (5.6.2 버전 보안 이슈 발생)
+	implementation("org.apache.jmeter:ApacheJMeter_core:5.6.1")
+	implementation("org.apache.jmeter:ApacheJMeter_http:5.6.1")
+
+	// keycloak
 	implementation("org.keycloak:keycloak-admin-client:23.0.1")
 }
 
